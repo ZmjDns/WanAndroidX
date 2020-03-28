@@ -35,6 +35,12 @@ dependencies {
     api confDepend['androidx-appcompat']
     api confDepend['androidx-core-ktx']
     api confDepend['constraintlayout']
+    api confDepend['retrofit']
+    api confDepend['convert-gson']
+    //api confDepend['okHttp']
+    api confDepend['rxjava']
+    api confDepend['rxandroid']
+    api confDepend['adapter-rxjava2']
 
 
 
