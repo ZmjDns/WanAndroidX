@@ -41,6 +41,10 @@ dependencies {
     api confDepend['rxjava']
     api confDepend['rxandroid']
     api confDepend['adapter-rxjava2']
+    //viewmodel
+    api confDepend['lifecycle-extensions']
+    api confDepend['lifecycle-livedata-ktx']
+    api confDepend['lifecycle-viewmodel-ktx']
 
 
 
