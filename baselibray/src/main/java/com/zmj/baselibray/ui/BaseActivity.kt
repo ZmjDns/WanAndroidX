@@ -5,6 +5,8 @@ import android.os.Bundle
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.LifecycleObserver
+import com.zmj.baselibray.broadcastreceiver.NetBroadCastReceiver
+import com.zmj.baselibray.common.NetConnectListener
 import com.zmj.baselibray.common.setUserStatusBarColor
 import com.zmj.baselibray.presenter.IBasePresenter
 import com.zmj.baselibray.presenter.IBaseView
@@ -16,9 +18,10 @@ import com.zmj.baselibray.presenter.IBaseView
  * Time : 2020/3/26
  * Description :
  */
-abstract class BaseActivity<P: IBasePresenter<*>>: AppCompatActivity(){
+abstract class BaseActivity<P: IBasePresenter<*>>: AppCompatActivity(),NetConnectListener{
 
     protected var presenter: P? = null
+    private val netReceiver: NetBroadCastReceiver by lazy { NetBroadCastReceiver(this) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,6 +46,14 @@ abstract class BaseActivity<P: IBasePresenter<*>>: AppCompatActivity(){
     //设置状态栏字体颜色
     protected fun setStatusBarTextColor(){
         com.zmj.baselibray.common.setStatusBarTextColor(this,true,true)
+    }
+
+    //断网或网络重新连接操作，可以由子类重写做自己的逻辑
+    override fun onDicConnect() {
+
+    }
+    override fun onReconnect() {
+
     }
 
 
