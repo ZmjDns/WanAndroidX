@@ -26,7 +26,8 @@ ext{
 
             "junit_version"             :"4.12",
             "test_ext_junit_version"    :"1.1.1",
-            "espresso_version"          :"3.2.0"
+            "espresso_version"          :"3.2.0",
+            "lifecycle_version"         :"2.2.0-alpha01"
     ]
 
     dependencies = [
@@ -40,6 +41,9 @@ ext{
             "rxjava"                    :"io.reactivex.rxjava2:rxjava:${dependVesion.rxjava_version}",
             "rxandroid"                 :"io.reactivex.rxjava2:rxandroid:${dependVesion.rxandroid_version}",
             "adapter-rxjava2"           :"com.squareup.retrofit2:adapter-rxjava2:${dependVesion.retrofit_version}",
+            "lifecycle-extensions"      :"androidx.lifecycle:lifecycle-extensions:${dependVesion.lifecycle_version}",
+            "lifecycle-livedata-ktx"    :"androidx.lifecycle:lifecycle-livedata-ktx:${dependVesion.lifecycle_version}",
+            "lifecycle-viewmodel-ktx"   :"androidx.lifecycle:lifecycle-viewmodel-ktx:${dependVesion.lifecycle_version}",
 
 
             "junit"                     :"junit:junit:${dependVesion.junit_version}",
