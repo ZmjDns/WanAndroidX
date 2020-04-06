@@ -31,6 +31,9 @@ android {
         }
     }
 
+    //输出乱码
+    compileOptions.encoding = "UTF-8"
+
 }
 
 dependencies {
