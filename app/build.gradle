@@ -35,12 +35,15 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
+    compileOptions.encoding = "UTF-8"
+
 
 }
 
 dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])
     api project(path: ':baselibray')
+    api project(path: ':netlibrary')
 
     testImplementation confDepend['junit']
     androidTestImplementation confDepend['test.ext:junit']
