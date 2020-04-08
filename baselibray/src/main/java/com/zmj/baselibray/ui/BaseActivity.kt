@@ -25,13 +25,23 @@ abstract class BaseActivity<P: IBasePresenter<*>>: AppCompatActivity(),NetConnec
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        supportActionBar.let {
+            it?.hide()
+        }
+
         if (layoutRes != 0){
             setContentView(layoutRes)
         }
         presenter = createPresenter()
-        presenter.let {
+        /*presenter.let {
             lifecycle.addObserver(it as LifecycleObserver)
+        }*/
+
+        if (presenter != null){
+            lifecycle.addObserver(presenter!!)
         }
+
         setWindowStatusBarColor()
         setStatusBarTextColor()
 
