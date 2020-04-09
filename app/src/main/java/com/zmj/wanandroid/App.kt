@@ -1,23 +1,17 @@
 package com.zmj.wanandroid
 
-import com.zmj.baselibray.BaseApplication
+import android.app.Application
 
 /**
  * Author : Zmj
  * Blog : https://blog.csdn.net/Zmj_Dns
  * GitHub : https://github.com/ZmjDns
- * Time : 2020/3/31
+ * Time : 2020/4/6
  * Description :
  */
-class App: BaseApplication()  {
-
-    companion object{
-        lateinit var APP_INSTANCE: App
-    }
+class App: Application() {
 
     override fun onCreate() {
         super.onCreate()
-
-        APP_INSTANCE = this
     }
 }
