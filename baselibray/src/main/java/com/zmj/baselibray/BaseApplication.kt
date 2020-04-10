@@ -12,7 +12,7 @@ import android.app.Application
 open class BaseApplication: Application() {
 
     companion object{
-        lateinit var baseApplication: Application
+        public lateinit var baseApplication: Application
     }
 
     override fun onCreate() {
