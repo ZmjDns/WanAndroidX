@@ -43,6 +43,7 @@ dependencies {
     api confDepend['androidx-appcompat']
     api confDepend['androidx-core-ktx']
     api confDepend['constraintlayout']
+    api confDepend['marerial-design']
     api confDepend['retrofit']
     api confDepend['convert-gson']
     //api confDepend['okHttp']
